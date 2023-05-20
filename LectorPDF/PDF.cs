@@ -19,6 +19,7 @@ namespace LectorPDF
         public PDF()
         {
             InitializeComponent();
+
         }
 
 
