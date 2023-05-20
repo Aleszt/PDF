@@ -28,9 +28,11 @@ namespace LectorPDF
 
 
 
-                    // Por ejemplo, mostrar el formulario PDF
+                // Por ejemplo, mostrar el formulario PDF
+                    this.Close();
                     PDF pdf = new PDF();
                     pdf.ShowDialog();
+                    
                 }
                 else
                 {

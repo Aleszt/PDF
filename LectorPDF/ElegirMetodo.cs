@@ -21,12 +21,14 @@ namespace LectorPDF
         {
             InicioSesionEmpleado inicio = new InicioSesionEmpleado();
             inicio.ShowDialog();
+            this.Close();
         }
 
         private void btnJefe_Click(object sender, EventArgs e)
         {
             InicioSesionJefe inicio = new InicioSesionJefe();
             inicio.ShowDialog();
+            this.Close();
         }
     }
 }

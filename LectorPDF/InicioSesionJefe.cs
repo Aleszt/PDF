@@ -34,6 +34,7 @@ namespace LectorPDF
                 // Realizar acciones adicionales después de iniciar sesión exitosamente
 
                 // Por ejemplo, mostrar el formulario PDF
+                this.Close();
                 PDF pdf = new PDF();
                 pdf.ShowDialog();
             }
