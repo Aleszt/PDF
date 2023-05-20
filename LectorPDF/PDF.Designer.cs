@@ -232,6 +232,7 @@ namespace LectorPDF
             this.btnExtraer.TabIndex = 21;
             this.btnExtraer.Text = "EXTRAER";
             this.btnExtraer.UseVisualStyleBackColor = true;
+            this.btnExtraer.Click += new System.EventHandler(this.btnExtraer_Click_1);
             // 
             // PDF
             // 

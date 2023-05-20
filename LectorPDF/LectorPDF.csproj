@@ -153,6 +153,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="FormArrastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArrastrar.Designer.cs">
+      <DependentUpon>FormArrastrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioSesionEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
