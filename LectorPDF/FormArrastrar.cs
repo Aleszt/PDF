@@ -15,6 +15,8 @@ namespace LectorPDF
 {
     public partial class FormArrastrar : Form
     {
+        int contadore = 0;
+        Conexion cn = new Conexion();
         public FormArrastrar()
         {
             InitializeComponent();
@@ -51,6 +53,7 @@ namespace LectorPDF
             using (PdfReader reader = new PdfReader(rutaPDF))
             {
                 // Recorrer las páginas del PDF
+                
                 for (int pageNumber = 1; pageNumber <= reader.NumberOfPages; pageNumber++)
                 {
                     // Extraer el texto de la página actual
@@ -69,10 +72,23 @@ namespace LectorPDF
 
                     // Mostrar la información en los TextBox del formulario principal (Form1)
                     PDF form1 = Application.OpenForms.OfType<PDF>().FirstOrDefault();
+                    string papellido = Lista[0];
+                    string sapellido = Lista.Length >= 2 ? Lista[1] : string.Empty;
+                    
+                    if (contadore == 0)
+                    {
+
+                        cn.EjecutarConsulta($"INSERT INTO tdatospdf (IDU, IDE, RFC, CURP, Nombre, PrimerApellido, SegundoApellido, FechaInicio, Estatus, FechaCambio, NombreComercial) VALUES ('{ElegirMetodo.IDu}', '{ElegirMetodo.IDe}', '{rfc}', '{curp}', '{nombre}', '{papellido}', '{sapellido}', '{fechaInicio}', '{estatus}', '{fechaCambio}', '{nombreComercial}');");
+
+                        contadore++;
+                    }
                     if (form1 != null)
                     {
+                        
                         form1.ActualizarTextBox(rfc, curp, nombre, Lista[0], Lista.Length >= 2 ? Lista[1] : string.Empty, fechaInicio, estatus, fechaCambio, nombreComercial);
+                          
                     }
+                    
                     this.Close();
                 }
             }

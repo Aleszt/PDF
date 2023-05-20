@@ -19,7 +19,11 @@ namespace LectorPDF
                 string contraseña = txtContraseña.Text;
 
                 string consulta = $"SELECT * FROM templeado WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}'";
-                DataTable resultado = cn.CargarDatos(consulta);
+            using (var dt = cn.CargarDatos($"SELECT IDE FROM templeado WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}'"))
+            {
+                ElegirMetodo.IDe = dt.Rows[0]["IDE"].ToString();
+            }
+            DataTable resultado = cn.CargarDatos(consulta);
 
                 if (resultado.Rows.Count > 0)
                 {
