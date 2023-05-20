@@ -185,6 +185,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormArrastrar.resx">
+      <DependentUpon>FormArrastrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InicioSesionEmpleado.resx">
       <DependentUpon>InicioSesionEmpleado.cs</DependentUpon>
     </EmbeddedResource>
