@@ -26,7 +26,7 @@ namespace LectorPDF
                     // Credenciales válidas
                     MessageBox.Show("Inicio de sesión exitoso", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Realizar acciones adicionales después de iniciar sesión exitosamente
+
 
                     // Por ejemplo, mostrar el formulario PDF
                     PDF pdf = new PDF();
@@ -36,7 +36,9 @@ namespace LectorPDF
                 {
                     // Credenciales inválidas
                     MessageBox.Show("Nombre de usuario o contraseña incorrectos. Inténtalo de nuevo", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                
+            
+            }
             
 
         }
