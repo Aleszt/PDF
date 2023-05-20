@@ -16,9 +16,11 @@ namespace LectorPDF
 {
     public partial class PDF : Form
     {
+
         public PDF()
         {
             InitializeComponent();
+
         }
 
 
@@ -47,6 +49,17 @@ namespace LectorPDF
         {
             FormArrastrar formArrastrar = new FormArrastrar();
             formArrastrar.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (var control in panel2.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.Text = string.Empty;
+                }
+            }
         }
     }
 }
