@@ -22,8 +22,11 @@ namespace LectorPDF
         {
             string usuario = txtUsuario.Text.Trim();
             string contraseña = txtContraseña.Text;
-
+            var dt = $"SELECT IDU FROM tjefe WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}';";
+                DataTable resu = cn.CargarDatos(dt);
+                ElegirMetodo.IDu = resu.Rows[0]["IDU"].ToString();
             string consulta = $"SELECT * FROM tjefe WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}'";
+            
             DataTable resultado = cn.CargarDatos(consulta);
 
             if (resultado.Rows.Count > 0)

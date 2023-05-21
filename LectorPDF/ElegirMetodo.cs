@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace LectorPDF
 {
+    
     public partial class ElegirMetodo : Form
     {
+        public static string IDu = "0";
+        public static string IDe = "0";
         public ElegirMetodo()
         {
             InitializeComponent();
