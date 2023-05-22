@@ -71,8 +71,8 @@ namespace LectorPDF
 
         private void PDF_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ElegirMetodo.IDu = "";
-            ElegirMetodo.IDe = "";
+            ElegirMetodo.IDu = "0";
+            ElegirMetodo.IDe = "0";
 
         }
     }
