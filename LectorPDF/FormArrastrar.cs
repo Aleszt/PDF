@@ -76,6 +76,7 @@ namespace LectorPDF
                        string prov = $"INSERT INTO tdatospdf(IDU, IDE, RFC, CURP, Nombre, PrimerApellido, SegundoApellido, FechaInicio, Estatus, FechaCambio, NombreComercial) VALUES('{ElegirMetodo.IDu}', '{ElegirMetodo.IDe}', '{rfc}', '{curp}', '{nombre}', '{papellido}', '{sapellido}', '{fechaCambio}', '{estatus}', '{fechaCambio}', '{nombreComercial}')";
                         DataTable resultado = cn.CargarDatos(prov);
                         contadore++;
+
                     }
 
                     // Mostrar la información en los TextBox del formulario principal (Form1)
