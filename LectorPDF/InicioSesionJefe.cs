@@ -23,22 +23,31 @@ namespace LectorPDF
             string usuario = txtUsuario.Text.Trim();
             string contraseña = txtContraseña.Text;
             var dt = $"SELECT IDU FROM tjefe WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}';";
-                DataTable resu = cn.CargarDatos(dt);
-                ElegirMetodo.IDu = resu.Rows[0]["IDU"].ToString();
-            string consulta = $"SELECT * FROM tjefe WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}'";
-            
-            DataTable resultado = cn.CargarDatos(consulta);
+            DataTable resu = cn.CargarDatos(dt);
 
-            if (resultado.Rows.Count > 0)
+            if (resu.Rows.Count > 0)
             {
-                // Credenciales válidas
-                MessageBox.Show("Inicio de sesión exitoso", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ElegirMetodo.IDu = resu.Rows[0]["IDU"].ToString();
 
-                // Realizar acciones adicionales después de iniciar sesión exitosamente
+                string consulta = $"SELECT * FROM tjefe WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}'";
+                DataTable resultado = cn.CargarDatos(consulta);
 
-                // Por ejemplo, mostrar el formulario PDF
-                PDF pdf = new PDF();
-                pdf.ShowDialog();
+                if (resultado.Rows.Count > 0)
+                {
+                    // Credenciales válidas
+                    MessageBox.Show("Inicio de sesión exitoso", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Realizar acciones adicionales después de iniciar sesión exitosamente
+
+                    // Por ejemplo, mostrar el formulario PDF
+                    PDF pdf = new PDF();
+                    pdf.ShowDialog();
+                }
+                else
+                {
+                    // Credenciales inválidas
+                    MessageBox.Show("Nombre de usuario o contraseña incorrectos. Inténtalo de nuevo", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {

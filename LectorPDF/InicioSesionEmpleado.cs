@@ -15,21 +15,23 @@ namespace LectorPDF
 
         private void btnInicioSesion_Click(object sender, EventArgs e)
         {
-                string usuario = txtUsuario.Text.Trim();
-                string contraseña = txtContraseña.Text;
-                var dt = $"SELECT IDE FROM templeado WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}';";
-                DataTable resu = cn.CargarDatos(dt);
+            string usuario = txtUsuario.Text.Trim();
+            string contraseña = txtContraseña.Text;
+
+            var dt = $"SELECT IDE FROM templeado WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}';";
+            DataTable resu = cn.CargarDatos(dt);
+
+            if (resu.Rows.Count > 0)
+            {
                 ElegirMetodo.IDe = resu.Rows[0]["IDE"].ToString();
 
-            string consulta = $"SELECT * FROM templeado WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}'";
+                string consulta = $"SELECT * FROM templeado WHERE NombreUsuario = '{usuario}' AND Contrasenna = '{contraseña}'";
                 DataTable resultado = cn.CargarDatos(consulta);
 
                 if (resultado.Rows.Count > 0)
                 {
                     // Credenciales válidas
                     MessageBox.Show("Inicio de sesión exitoso", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
 
                     // Por ejemplo, mostrar el formulario PDF
                     PDF pdf = new PDF();
@@ -39,10 +41,14 @@ namespace LectorPDF
                 {
                     // Credenciales inválidas
                     MessageBox.Show("Nombre de usuario o contraseña incorrectos. Inténtalo de nuevo", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
-            
+                }
             }
-            
+            else
+            {
+                // Credenciales inválidas
+                MessageBox.Show("Nombre de usuario o contraseña incorrectos. Inténtalo de nuevo", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
 
         }
 
