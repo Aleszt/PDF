@@ -30,10 +30,8 @@ namespace LectorPDF
 
                 if (resultado.Rows.Count > 0)
                 {
-                    // Credenciales válidas
-                    MessageBox.Show("Inicio de sesión exitoso", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Por ejemplo, mostrar el formulario PDF
+                    
+                    // Mostrar el formulario PDF
                     PDF pdf = new PDF();
                     pdf.ShowDialog();
                 }
