@@ -16,6 +16,7 @@ namespace LectorPDF
 {
     public partial class PDF : Form
     {
+        Conexion cn = new Conexion();
 
         public PDF()
         {
@@ -74,6 +75,20 @@ namespace LectorPDF
             ElegirMetodo.IDu = "0";
             ElegirMetodo.IDe = "0";
 
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            // Verificar si los datos ya existen en la base de datos
+            string consultaExistencia = $"SELECT COUNT(*) FROM tdatospdf WHERE IDU = '{ElegirMetodo.IDu}' AND IDE = '{ElegirMetodo.IDe}'";
+            int existe = Convert.ToInt32(cn.CargarDatos(consultaExistencia).Rows[0][0]);
+
+            if (existe == 0)
+            {
+                // Insertar los datos en la base de datos
+                string consulta = $"INSERT INTO tdatospdf (IDU, IDE, RFC, CURP, Nombre, PrimerApellido, SegundoApellido, FechaInicio, Estatus, FechaCambio, NombreComercial, Referencia) VALUES ('{ElegirMetodo.IDu}', '{ElegirMetodo.IDe}', '{textBoxRFC.Text}', '{textBoxCURP.Text}', '{textBoxNombre.Text}', '{textBoxApellido.Text}', '{textBoxSegundoApellido.Text}', '{textBoxFechaInicio.Text}', '{textBoxEstatus.Text}', '{textBoxFechaCambio.Text}', '{textBoxNombreComercial.Text}','{txtNReferencia.Text}')";
+                int resultado = cn.EjecutarConsulta(consulta);
+            }
         }
     }
 }

@@ -71,27 +71,25 @@ namespace LectorPDF
                     string papellido = Lista[0];
                     string sapellido = Lista.Length >= 2 ? Lista[1] : string.Empty;
 
-                    // Verificar si los datos ya existen en la base de datos
-                    string consultaExistencia = $"SELECT COUNT(*) FROM tdatospdf WHERE IDU = '{ElegirMetodo.IDu}' AND IDE = '{ElegirMetodo.IDe}'";
-                    int existe = Convert.ToInt32(cn.CargarDatos(consultaExistencia).Rows[0][0]);
-
-                    if (existe == 0)
+                    if (string.IsNullOrEmpty(rfc) || string.IsNullOrEmpty(curp) || string.IsNullOrEmpty(nombre))
                     {
-                        // Insertar los datos en la base de datos
-                        string consulta = $"INSERT INTO tdatospdf (IDU, IDE, RFC, CURP, Nombre, PrimerApellido, SegundoApellido, FechaInicio, Estatus, FechaCambio, NombreComercial) VALUES ('{ElegirMetodo.IDu}', '{ElegirMetodo.IDe}', '{rfc}', '{curp}', '{nombre}', '{papellido}', '{sapellido}', '{fechaCambio}', '{estatus}', '{fechaCambio}', '{nombreComercial}')";
-                        int resultado = cn.EjecutarConsulta(consulta);
+                        MessageBox.Show("Error: Los datos Nombre, RFC y CURP son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //this.Close(); // O realiza alguna otra acción en caso de error
                     }
-
-                    // Mostrar la información en los TextBox del formulario principal (Form1)
-                    PDF form1 = Application.OpenForms.OfType<PDF>().FirstOrDefault();
-                    if (form1 != null)
+                    else
                     {
-                        form1.ActualizarTextBox(rfc, curp, nombre, Lista[0], Lista.Length >= 2 ? Lista[1] : string.Empty, fechaInicio, estatus, fechaCambio, nombreComercial);
+
+                        // Mostrar la información en los TextBox del formulario principal (Form1)
+                        PDF form1 = Application.OpenForms.OfType<PDF>().FirstOrDefault();
+                        if (form1 != null)
+                        {
+                            form1.ActualizarTextBox(rfc, curp, nombre, Lista[0], Lista.Length >= 2 ? Lista[1] : string.Empty, fechaInicio, estatus, fechaCambio, nombreComercial);
+                            this.Close();
+                        }
                     }
+                    break;
+
                 }
-
-                this.Close();
-
             }
         }
 
