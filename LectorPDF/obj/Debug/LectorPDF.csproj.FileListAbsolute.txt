@@ -165,3 +165,4 @@ C:\Users\Paulo Cesar\source\repos\PDF\LectorPDF\obj\Debug\LectorPDF.csproj.CopyC
 C:\Users\Paulo Cesar\source\repos\PDF\LectorPDF\obj\Debug\LectorPDF.exe
 C:\Users\Paulo Cesar\source\repos\PDF\LectorPDF\obj\Debug\LectorPDF.pdb
 C:\Users\Paulo Cesar\source\repos\PDF\LectorPDF\obj\Debug\LectorPDF.FormArrastrar.resources
+C:\Users\Alejandro\source\repos\LectorPDF\LectorPDF\obj\Debug\LectorPDF.FormArrastrar.resources
