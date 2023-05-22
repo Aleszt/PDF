@@ -67,6 +67,7 @@ namespace LectorPDF
             this.Name = "FormArrastrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SELECOR PDF";
+            this.Load += new System.EventHandler(this.FormArrastrar_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormArrastrar_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormArrastrar_DragEnter);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

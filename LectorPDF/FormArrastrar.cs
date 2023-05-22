@@ -15,8 +15,10 @@ namespace LectorPDF
 {
     public partial class FormArrastrar : Form
     {
+        Conexion cn = new Conexion();
         public FormArrastrar()
         {
+            
             InitializeComponent();
             this.AllowDrop = true;
             this.DragEnter += FormArrastrar_DragEnter;
@@ -47,9 +49,11 @@ namespace LectorPDF
 
         public void ExtraerDatosPDF(string rutaPDF)
         {
-            // Leer el archivo PDF y extraer los datos
+            // Leer el archivo PDF y extraer los
+            // datos 
             using (PdfReader reader = new PdfReader(rutaPDF))
             {
+                int contadore = 0;
                 // Recorrer las páginas del PDF
                 for (int pageNumber = 1; pageNumber <= reader.NumberOfPages; pageNumber++)
                 {
@@ -66,6 +70,14 @@ namespace LectorPDF
                     string estatus = FiltrarInformacion(text, "Estatus en el padrón: ([A-Za-z ]+)");
                     string fechaCambio = FiltrarInformacion(text, "Fecha de último cambio de estado: ([0-9A-Z ]+)");
                     string nombreComercial = FiltrarInformacion(text, "Nombre Comercial: ([A-Za-zÑ-ñ ]+)");
+                    string papellido = Lista[0];
+                    string sapellido = Lista.Length >= 2 ? Lista[1] : string.Empty;
+                    if (contadore==0)
+                    {
+                       string prov = $"INSERT INTO tdatospdf(IDU, IDE, RFC, CURP, Nombre, PrimerApellido, SegundoApellido, FechaInicio, Estatus, FechaCambio, NombreComercial) VALUES('{ElegirMetodo.IDu}', '{ElegirMetodo.IDe}', '{rfc}', '{curp}', '{nombre}', '{papellido}', '{sapellido}', '{fechaCambio}', '{estatus}', '{fechaCambio}', '{nombreComercial}')";
+                        DataTable resultado = cn.CargarDatos(prov);
+                        contadore++;
+                    }
 
                     // Mostrar la información en los TextBox del formulario principal (Form1)
                     PDF form1 = Application.OpenForms.OfType<PDF>().FirstOrDefault();
@@ -73,6 +85,7 @@ namespace LectorPDF
                     {
                         form1.ActualizarTextBox(rfc, curp, nombre, Lista[0], Lista.Length >= 2 ? Lista[1] : string.Empty, fechaInicio, estatus, fechaCambio, nombreComercial);
                     }
+                    
                     this.Close();
                 }
             }
@@ -108,6 +121,11 @@ namespace LectorPDF
             }
 
             return resultado;
+        }
+
+        private void FormArrastrar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
