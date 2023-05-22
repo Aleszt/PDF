@@ -49,11 +49,9 @@ namespace LectorPDF
 
         public void ExtraerDatosPDF(string rutaPDF)
         {
-            // Leer el archivo PDF y extraer los
-            // datos 
+            // Leer el archivo PDF y extraer los datos 
             using (PdfReader reader = new PdfReader(rutaPDF))
             {
-                int contadore = 0;
                 // Recorrer las páginas del PDF
                 for (int pageNumber = 1; pageNumber <= reader.NumberOfPages; pageNumber++)
                 {
@@ -72,25 +70,28 @@ namespace LectorPDF
                     string nombreComercial = FiltrarInformacion(text, "Nombre Comercial: ([A-Za-zÑ-ñ ]+)");
                     string papellido = Lista[0];
                     string sapellido = Lista.Length >= 2 ? Lista[1] : string.Empty;
-                    if (contadore==0)
+
+                    // Verificar si los datos ya existen en la base de datos
+                    string consultaExistencia = $"SELECT COUNT(*) FROM tdatospdf WHERE IDU = '{ElegirMetodo.IDu}' AND IDE = '{ElegirMetodo.IDe}'";
+                    int existe = Convert.ToInt32(cn.CargarDatos(consultaExistencia).Rows[0][0]);
+
+                    if (existe == 0)
                     {
-                       string prov = $"INSERT INTO tdatospdf(IDU, IDE, RFC, CURP, Nombre, PrimerApellido, SegundoApellido, FechaInicio, Estatus, FechaCambio, NombreComercial) VALUES('{ElegirMetodo.IDu}', '{ElegirMetodo.IDe}', '{rfc}', '{curp}', '{nombre}', '{papellido}', '{sapellido}', '{fechaCambio}', '{estatus}', '{fechaCambio}', '{nombreComercial}')";
-                        DataTable resultado = cn.CargarDatos(prov);
-                        contadore++;
+                        // Insertar los datos en la base de datos
+                        string consulta = $"INSERT INTO tdatospdf (IDU, IDE, RFC, CURP, Nombre, PrimerApellido, SegundoApellido, FechaInicio, Estatus, FechaCambio, NombreComercial) VALUES ('{ElegirMetodo.IDu}', '{ElegirMetodo.IDe}', '{rfc}', '{curp}', '{nombre}', '{papellido}', '{sapellido}', '{fechaCambio}', '{estatus}', '{fechaCambio}', '{nombreComercial}')";
+                        int resultado = cn.EjecutarConsulta(consulta);
                     }
 
-                    
-                    
                     // Mostrar la información en los TextBox del formulario principal (Form1)
                     PDF form1 = Application.OpenForms.OfType<PDF>().FirstOrDefault();
                     if (form1 != null)
                     {
                         form1.ActualizarTextBox(rfc, curp, nombre, Lista[0], Lista.Length >= 2 ? Lista[1] : string.Empty, fechaInicio, estatus, fechaCambio, nombreComercial);
                     }
-                    
-                    this.Close();
-
                 }
+
+                this.Close();
+
             }
         }
 

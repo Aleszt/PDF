@@ -49,6 +49,7 @@ namespace LectorPDF
         {
             FormArrastrar formArrastrar = new FormArrastrar();
             formArrastrar.ShowDialog();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,6 +61,19 @@ namespace LectorPDF
                     textBox.Text = string.Empty;
                 }
             }
+        }
+
+        private void PDF_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+           
+        }
+
+        private void PDF_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ElegirMetodo.IDu = "";
+            ElegirMetodo.IDe = "";
+
         }
     }
 }

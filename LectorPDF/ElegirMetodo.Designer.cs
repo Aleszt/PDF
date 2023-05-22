@@ -87,9 +87,9 @@ namespace LectorPDF
             this.Name = "ElegirMetodo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.ElegirMetodo_Load);
+
             this.panel1.PerformLayout();
-            this.ResumeLayout(false);
 
         }
 

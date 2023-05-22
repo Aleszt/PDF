@@ -58,20 +58,19 @@ namespace LectorPDF
             // 
             // textBoxSegundoApellido
             // 
-            this.textBoxSegundoApellido.Location = new System.Drawing.Point(7, 171);
-            this.textBoxSegundoApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSegundoApellido.Location = new System.Drawing.Point(9, 210);
+            this.textBoxSegundoApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSegundoApellido.Name = "textBoxSegundoApellido";
-            this.textBoxSegundoApellido.Size = new System.Drawing.Size(201, 20);
+            this.textBoxSegundoApellido.Size = new System.Drawing.Size(267, 22);
             this.textBoxSegundoApellido.TabIndex = 41;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(26, 265);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(35, 326);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 13);
+            this.label10.Size = new System.Drawing.Size(165, 17);
             this.label10.TabIndex = 40;
             this.label10.Text = "SEGUNDO APELLIDO";
             // 
@@ -80,10 +79,9 @@ namespace LectorPDF
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(143, 47);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(191, 58);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 26);
+            this.label9.Size = new System.Drawing.Size(155, 31);
             this.label9.TabIndex = 39;
             this.label9.Text = "DATOS PDF";
             // 
@@ -91,19 +89,18 @@ namespace LectorPDF
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(412, 36);
+            this.panel1.Size = new System.Drawing.Size(549, 44);
             this.panel1.TabIndex = 38;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(26, 443);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(35, 545);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 13);
+            this.label8.Size = new System.Drawing.Size(167, 17);
             this.label8.TabIndex = 37;
             this.label8.Text = "NOMBRE COMERCIAL";
             // 
@@ -111,10 +108,9 @@ namespace LectorPDF
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(26, 400);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(35, 492);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 13);
+            this.label7.Size = new System.Drawing.Size(147, 17);
             this.label7.TabIndex = 36;
             this.label7.Text = "FECHA DE CAMBIO";
             // 
@@ -122,10 +118,9 @@ namespace LectorPDF
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 356);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(29, 438);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.Size = new System.Drawing.Size(79, 17);
             this.label6.TabIndex = 35;
             this.label6.Text = "ESTATUS";
             // 
@@ -133,10 +128,9 @@ namespace LectorPDF
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 312);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(29, 384);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 13);
+            this.label5.Size = new System.Drawing.Size(134, 17);
             this.label5.TabIndex = 34;
             this.label5.Text = "FECHA DE INICIO";
             // 
@@ -144,10 +138,9 @@ namespace LectorPDF
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 215);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(35, 265);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 13);
+            this.label4.Size = new System.Drawing.Size(146, 17);
             this.label4.TabIndex = 33;
             this.label4.Text = "PRIMER APELLIDO";
             // 
@@ -155,10 +148,9 @@ namespace LectorPDF
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 174);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(35, 214);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(74, 17);
             this.label3.TabIndex = 32;
             this.label3.Text = "NOMBRE";
             // 
@@ -166,10 +158,9 @@ namespace LectorPDF
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 135);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(35, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 31;
             this.label2.Text = "CURP";
             // 
@@ -177,83 +168,82 @@ namespace LectorPDF
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 99);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(35, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(38, 17);
             this.label1.TabIndex = 30;
             this.label1.Text = "RFC";
             // 
             // textBoxNombreComercial
             // 
-            this.textBoxNombreComercial.Location = new System.Drawing.Point(7, 351);
-            this.textBoxNombreComercial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombreComercial.Location = new System.Drawing.Point(9, 432);
+            this.textBoxNombreComercial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNombreComercial.Name = "textBoxNombreComercial";
-            this.textBoxNombreComercial.Size = new System.Drawing.Size(201, 20);
+            this.textBoxNombreComercial.Size = new System.Drawing.Size(267, 22);
             this.textBoxNombreComercial.TabIndex = 29;
             // 
             // textBoxFechaCambio
             // 
-            this.textBoxFechaCambio.Location = new System.Drawing.Point(7, 308);
-            this.textBoxFechaCambio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFechaCambio.Location = new System.Drawing.Point(9, 379);
+            this.textBoxFechaCambio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxFechaCambio.Name = "textBoxFechaCambio";
-            this.textBoxFechaCambio.Size = new System.Drawing.Size(201, 20);
+            this.textBoxFechaCambio.Size = new System.Drawing.Size(267, 22);
             this.textBoxFechaCambio.TabIndex = 28;
             // 
             // textBoxEstatus
             // 
-            this.textBoxEstatus.Location = new System.Drawing.Point(7, 264);
-            this.textBoxEstatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEstatus.Location = new System.Drawing.Point(9, 325);
+            this.textBoxEstatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxEstatus.Name = "textBoxEstatus";
-            this.textBoxEstatus.Size = new System.Drawing.Size(201, 20);
+            this.textBoxEstatus.Size = new System.Drawing.Size(267, 22);
             this.textBoxEstatus.TabIndex = 27;
             // 
             // textBoxFechaInicio
             // 
-            this.textBoxFechaInicio.Location = new System.Drawing.Point(7, 220);
-            this.textBoxFechaInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFechaInicio.Location = new System.Drawing.Point(9, 271);
+            this.textBoxFechaInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxFechaInicio.Name = "textBoxFechaInicio";
-            this.textBoxFechaInicio.Size = new System.Drawing.Size(201, 20);
+            this.textBoxFechaInicio.Size = new System.Drawing.Size(267, 22);
             this.textBoxFechaInicio.TabIndex = 26;
             // 
             // textBoxApellido
             // 
-            this.textBoxApellido.Location = new System.Drawing.Point(7, 123);
-            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxApellido.Location = new System.Drawing.Point(9, 151);
+            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxApellido.Name = "textBoxApellido";
-            this.textBoxApellido.Size = new System.Drawing.Size(201, 20);
+            this.textBoxApellido.Size = new System.Drawing.Size(267, 22);
             this.textBoxApellido.TabIndex = 25;
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(7, 82);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Location = new System.Drawing.Point(9, 101);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(201, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(267, 22);
             this.textBoxNombre.TabIndex = 24;
             // 
             // textBoxCURP
             // 
-            this.textBoxCURP.Location = new System.Drawing.Point(7, 43);
-            this.textBoxCURP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCURP.Location = new System.Drawing.Point(9, 53);
+            this.textBoxCURP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCURP.Name = "textBoxCURP";
-            this.textBoxCURP.Size = new System.Drawing.Size(201, 20);
+            this.textBoxCURP.Size = new System.Drawing.Size(267, 22);
             this.textBoxCURP.TabIndex = 23;
             // 
             // textBoxRFC
             // 
-            this.textBoxRFC.Location = new System.Drawing.Point(7, 7);
-            this.textBoxRFC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxRFC.Location = new System.Drawing.Point(9, 9);
+            this.textBoxRFC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRFC.Name = "textBoxRFC";
-            this.textBoxRFC.Size = new System.Drawing.Size(201, 20);
+            this.textBoxRFC.Size = new System.Drawing.Size(267, 22);
             this.textBoxRFC.TabIndex = 22;
             // 
             // btnExtraer
             // 
-            this.btnExtraer.Location = new System.Drawing.Point(29, 498);
-            this.btnExtraer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExtraer.Location = new System.Drawing.Point(39, 613);
+            this.btnExtraer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExtraer.Name = "btnExtraer";
-            this.btnExtraer.Size = new System.Drawing.Size(94, 19);
+            this.btnExtraer.Size = new System.Drawing.Size(125, 23);
             this.btnExtraer.TabIndex = 21;
             this.btnExtraer.Text = "EXTRAER";
             this.btnExtraer.UseVisualStyleBackColor = true;
@@ -261,10 +251,10 @@ namespace LectorPDF
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(286, 498);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(381, 613);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 19);
+            this.button1.Size = new System.Drawing.Size(125, 23);
             this.button1.TabIndex = 42;
             this.button1.Text = "LIMPIAR";
             this.button1.UseVisualStyleBackColor = true;
@@ -281,16 +271,17 @@ namespace LectorPDF
             this.panel2.Controls.Add(this.textBoxNombre);
             this.panel2.Controls.Add(this.textBoxCURP);
             this.panel2.Controls.Add(this.textBoxRFC);
-            this.panel2.Location = new System.Drawing.Point(172, 92);
+            this.panel2.Location = new System.Drawing.Point(229, 113);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(221, 380);
+            this.panel2.Size = new System.Drawing.Size(295, 468);
             this.panel2.TabIndex = 43;
             // 
             // PDF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 541);
+            this.ClientSize = new System.Drawing.Size(547, 666);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
@@ -306,10 +297,12 @@ namespace LectorPDF
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExtraer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PDF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDF";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PDF_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PDF_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

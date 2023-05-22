@@ -31,5 +31,10 @@ namespace LectorPDF
             InicioSesionJefe inicio = new InicioSesionJefe();
             inicio.ShowDialog();
         }
+
+        private void ElegirMetodo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

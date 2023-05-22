@@ -57,5 +57,10 @@ namespace LectorPDF
             sql_con.Close();
             return db;
         }
+
+        internal IDisposable BeginTransaction()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
