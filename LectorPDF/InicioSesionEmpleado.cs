@@ -61,27 +61,37 @@ namespace LectorPDF
                 MessageBox.Show("Por favor, ingrese un nombre de usuario y una contraseña válidos.", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // Construir la consulta SQL para insertar los datos del nuevo empleado
-            string consulta = $"INSERT INTO templeado (NombreUsuario, Contrasenna) VALUES ('{usuario}', '{contraseña}')";
-
-            // Ejecutar la consulta para registrar los datos del nuevo empleado
-            int resultado = cn.EjecutarConsulta(consulta);
-
-            if (resultado > 0)
+            string verifcarUsuarioExistente = $"SELECT IDE FROM templeado WHERE NombreUsuario = '{usuario}';";
+            int resu = cn.EjecutarConsulta(verifcarUsuarioExistente);
+            if (resu>0)
             {
-                // Registro exitoso
-                MessageBox.Show("Registro exitoso. Ahora puedes iniciar sesión con tus nuevas credenciales.", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Construir la consulta SQL para insertar los datos del nuevo empleado
+                string consulta = $"INSERT INTO templeado (NombreUsuario, Contrasenna) VALUES ('{usuario}', '{contraseña}')";
 
-                // Limpiar los campos de texto después del registro
-                txtUsuario.Text = string.Empty;
-                txtContraseña.Text = string.Empty;
+                // Ejecutar la consulta para registrar los datos del nuevo empleado
+                int resultado = cn.EjecutarConsulta(consulta);
+
+                if (resultado > 0)
+                {
+                    // Registro exitoso
+                    MessageBox.Show("Registro exitoso. Ahora puedes iniciar sesión con tus nuevas credenciales.", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Limpiar los campos de texto después del registro
+                    txtUsuario.Text = string.Empty;
+                    txtContraseña.Text = string.Empty;
+                }
+                else
+                {
+                    // Error en el registro
+                    MessageBox.Show("Error al registrar los datos. Inténtalo nuevamente.", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
                 // Error en el registro
-                MessageBox.Show("Error al registrar los datos. Inténtalo nuevamente.", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: Ya existe un usuario con ese nombre registrado: favor de ingresar un nombre valido", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
     }
 }

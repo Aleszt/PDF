@@ -53,6 +53,7 @@ namespace LectorPDF
             this.btnExtraer = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtNReferencia = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
@@ -62,8 +63,9 @@ namespace LectorPDF
             // textBoxSegundoApellido
             // 
             this.textBoxSegundoApellido.Location = new System.Drawing.Point(7, 171);
-            this.textBoxSegundoApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSegundoApellido.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSegundoApellido.Name = "textBoxSegundoApellido";
+            this.textBoxSegundoApellido.ReadOnly = true;
             this.textBoxSegundoApellido.Size = new System.Drawing.Size(201, 20);
             this.textBoxSegundoApellido.TabIndex = 41;
             // 
@@ -94,7 +96,7 @@ namespace LectorPDF
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(412, 36);
             this.panel1.TabIndex = 38;
@@ -190,71 +192,79 @@ namespace LectorPDF
             // textBoxNombreComercial
             // 
             this.textBoxNombreComercial.Location = new System.Drawing.Point(7, 351);
-            this.textBoxNombreComercial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombreComercial.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombreComercial.Name = "textBoxNombreComercial";
+            this.textBoxNombreComercial.ReadOnly = true;
             this.textBoxNombreComercial.Size = new System.Drawing.Size(201, 20);
             this.textBoxNombreComercial.TabIndex = 29;
             // 
             // textBoxFechaCambio
             // 
             this.textBoxFechaCambio.Location = new System.Drawing.Point(7, 308);
-            this.textBoxFechaCambio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFechaCambio.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFechaCambio.Name = "textBoxFechaCambio";
+            this.textBoxFechaCambio.ReadOnly = true;
             this.textBoxFechaCambio.Size = new System.Drawing.Size(201, 20);
             this.textBoxFechaCambio.TabIndex = 28;
             // 
             // textBoxEstatus
             // 
             this.textBoxEstatus.Location = new System.Drawing.Point(7, 264);
-            this.textBoxEstatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEstatus.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEstatus.Name = "textBoxEstatus";
+            this.textBoxEstatus.ReadOnly = true;
             this.textBoxEstatus.Size = new System.Drawing.Size(201, 20);
             this.textBoxEstatus.TabIndex = 27;
             // 
             // textBoxFechaInicio
             // 
             this.textBoxFechaInicio.Location = new System.Drawing.Point(7, 220);
-            this.textBoxFechaInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFechaInicio.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFechaInicio.Name = "textBoxFechaInicio";
+            this.textBoxFechaInicio.ReadOnly = true;
             this.textBoxFechaInicio.Size = new System.Drawing.Size(201, 20);
             this.textBoxFechaInicio.TabIndex = 26;
             // 
             // textBoxApellido
             // 
             this.textBoxApellido.Location = new System.Drawing.Point(7, 123);
-            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxApellido.Name = "textBoxApellido";
+            this.textBoxApellido.ReadOnly = true;
             this.textBoxApellido.Size = new System.Drawing.Size(201, 20);
             this.textBoxApellido.TabIndex = 25;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(7, 82);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.ReadOnly = true;
             this.textBoxNombre.Size = new System.Drawing.Size(201, 20);
             this.textBoxNombre.TabIndex = 24;
             // 
             // textBoxCURP
             // 
             this.textBoxCURP.Location = new System.Drawing.Point(7, 43);
-            this.textBoxCURP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCURP.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCURP.Name = "textBoxCURP";
+            this.textBoxCURP.ReadOnly = true;
             this.textBoxCURP.Size = new System.Drawing.Size(201, 20);
             this.textBoxCURP.TabIndex = 23;
             // 
             // textBoxRFC
             // 
             this.textBoxRFC.Location = new System.Drawing.Point(7, 7);
-            this.textBoxRFC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxRFC.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRFC.Name = "textBoxRFC";
+            this.textBoxRFC.ReadOnly = true;
             this.textBoxRFC.Size = new System.Drawing.Size(201, 20);
             this.textBoxRFC.TabIndex = 22;
             // 
             // btnExtraer
             // 
-            this.btnExtraer.Location = new System.Drawing.Point(29, 540);
-            this.btnExtraer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExtraer.Location = new System.Drawing.Point(18, 558);
+            this.btnExtraer.Margin = new System.Windows.Forms.Padding(2);
             this.btnExtraer.Name = "btnExtraer";
             this.btnExtraer.Size = new System.Drawing.Size(94, 19);
             this.btnExtraer.TabIndex = 21;
@@ -264,8 +274,8 @@ namespace LectorPDF
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(286, 540);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(275, 558);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 19);
             this.button1.TabIndex = 42;
@@ -275,6 +285,7 @@ namespace LectorPDF
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.txtNReferencia);
             this.panel2.Controls.Add(this.textBoxSegundoApellido);
             this.panel2.Controls.Add(this.textBoxNombreComercial);
@@ -289,6 +300,15 @@ namespace LectorPDF
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(221, 428);
             this.panel2.TabIndex = 43;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(-1, 415);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(227, 13);
+            this.label12.TabIndex = 47;
+            this.label12.Text = "Espacio para ingresar un nombre de referencia";
             // 
             // txtNReferencia
             // 
@@ -311,7 +331,7 @@ namespace LectorPDF
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(159, 540);
+            this.btnConfirmar.Location = new System.Drawing.Point(148, 558);
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(94, 19);
@@ -324,7 +344,7 @@ namespace LectorPDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 583);
+            this.ClientSize = new System.Drawing.Size(410, 587);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel2);
@@ -342,7 +362,7 @@ namespace LectorPDF
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExtraer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PDF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDF";
@@ -383,5 +403,6 @@ namespace LectorPDF
         private System.Windows.Forms.TextBox txtNReferencia;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Label label12;
     }
 }
